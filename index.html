@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Online Ticket</title>
+        <title>Online Ticket System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
         
-        <!-- CSS -->
-        <style>
-            body {
-                text-align: center;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-            .mylink {
-                display: none;
-            }
-            table {
-                border-collapse: collapse;
-            }
-            .box {
+        body{
+          
+          text-align: center;
+          padding-left: 8px;
+          padding-right: 8px;
+
+        }
+
+        .mylink {
+          display: none;
+        }
+
+        table {
+          border-collapse: collapse;
+        }
+
+            .box{
                 width: 300px;
                 height: 50px;
-                margin: 25px;
-                background: rgb(7,252,7);
+                margin: 25px ;
+                background: rgb(7, 252, 7);
                 text-align: center;
                 animation-name: sample;
                 animation-duration: 10s;
                 font-size: 20;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
-            @keyframes sample {
-                0%{background: pink; width: 200px;}
+            @keyframes sample{
+                0%{background: pink;
+                width: 200px;}
                 50%{background: cyan;}
-            } 
-            li {
+            }
+
+            li{
                 margin: 15px 10px;
                 display: inline;
                 padding-bottom: 5px;
@@ -45,13 +53,15 @@
                 font-style: italic;
                 color: rgb(179, 0, 255);
             }
-            table,td {
-                border: 1px solid rgb(0, 0, 0);
-                text-align: center;
-                margin: auto;
-                font-size: 18px;
-            }
-            th {
+
+              table,td {
+                  border: 1px solid rgb(0, 0, 0);
+                  text-align: center;
+                  margin: auto;
+                  font-size: 18px;
+              } 
+
+              th{
                 color: rgb(255, 0, 0);
                 border: 1px solid rgb(0, 0, 0);
                 text-align: center;
@@ -59,7 +69,8 @@
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-size: 20px;
             }
-            h2 {
+
+            h2{
                 margin: 10px;
                 padding: 15px;
                 text-align: center;
@@ -67,268 +78,289 @@
                 text-decoration-line: underline;
                 font-style: italic;
             }
-            h3 {
-                text-align: left;
+
+            h3{
+              text-align: left;
             }
+
             p {
-                text-align: left;
+              text-align: left;
             }
-        </style>
+   </style>
     </head>
+        
+        <body background="https://wallpaperaccess.com/full/136008.jpg" style=" background-size: 100%; background-repeat: repeat; background-attachment: fixed; ">
+            
+            <!-- Navigation Bar -->
+            <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+              <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Online Ticket</b></a>
+              <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
+            </div>
 
-    <body background="https://wallpaperaccess.com/full/136008.jpg" style="background-size: 100%; background-repeat: repeat; background-attachment: fixed;">
-        <!-- Navigation Bar-->
-        <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
-            <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Ticket</b></a>
-            <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
-        </div>
-
-        <nav class="navbar">
-            <ul class="navbar-list">
+            <nav class="navbar">   
+              <ul class="navbar-list">
                 <li><a href="#" class="navbarlink">Home</a></li>
                 <li><a href="#" class="navbarlink">Flight</a></li>
                 <li><a href="#" class="navbarlink">Track my Train</a></li>
                 <li><a href="#" class="navbarlink">Buses</a></li>
                 <li><a href="#" class="navbarlink">Contact details</a></li>
-            </ul>
-        </nav>
+              </ul>
+            </nav>
 
-        <!-- 3 Title animations -->
-        <div class="box">Book Train Ticket</div>
-        <div class="box">Book Bus Ticket</div>
-        <div class="box">Book Flight Ticket</div>
+            <div class="box">Book Train Ticket</div>
+            <div class="box">Book Bus Ticket</div>
+            <div class="box">Book Flight Ticket</div>
 
-        <!-- Header -->
-        <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
-            <img class="w3-image" src="https://www.w3schools.com/w3images/london2.jpg" width="100%" height="700">
-            <div class="w3-display-middle" style="width:65%">
-                <div class="w3-bar w3-black">
-                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Train');"><i class="fa fa-train w3-margin-right"></i>Train</button>
-                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i class="fa fa-plane w3-margin-right"></i>Flight</button>
-                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Bus');"><i class="fa fa-bus w3-margin-right"></i>Bus</button>
-                </div>
+            <!-- Header -->
+            <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+              <img class="w3-image" src="https://www.w3schools.com/w3images/london2.jpg" width="100%" height="700">
+              <div class="w3-display-middle" style="width:65%">
+              <div class="w3-bar w3-black">
+                <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Train');"><i class="fa fa-train w3-margin-right"></i>Train</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i class="fa fa-plane w3-margin-right"></i>Flight</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Bus');"><i class="fa fa-bus w3-margin-right"></i>Bus</button>
+              </div>
 
-                <!-- Tabs -->
-                <div class="Flight" class="w3-container w3-white w3-padding-16 myLink">
-                    <h3>Travel the World with together</h3>
-                    <div class="w3-row-padding" style="margin:0 -16px;">
-                        <div class="w3-half">
-                            <label>From</label>
-                            <input class="w3-input w3-border" type="text" placeholder="Departing from">
-                        </div>
-                        <div class="w3-half">
-                            <label>To</label>
-                            <input class="w3-input w3-border" type="text" placeholder="Arriving at">
-                        </div>
-                    </div>
-                    <p><button class="w3-button w3-dark-grey">Search and find dates</button></p>
-                </div>
-                <div id="Train" class="w3-container w3-white w3-padding-16 myLink">
-                    <h3>Find the best Trains</h3>
-                    <div class="w3-row-padding" style="margin:0 -16px;">
-                        <div class="w3-half">
-                            <label>From</label>
-                            <input class="w3-input w3-border" type="text" placeholder="Departing from">
-                        </div>
-                        <div class="w3-half">
-                            <label>To</label>
-                            <input class="w3-input w3-border" type="text" placeholder="Arriving at">
-                        </div>
-                    </div>
-                    <p><button class="w3-button w3-dark-grey">Search and find dates</button></p>
-                </div>
-                <div id="Bus" class="w3-container w3-white w3-padding-16 myLink">
-                    <h3>Best Bus rental in the world!</h3>
-                    <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span>Special offer if you book today: 25% off anywhere in the world with 🚌 service</p>
-                    <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
-                    <p><button class="w3-button w3-dark-grey">Search Availability</button></p>
-                </div>
-            </div>
-        </header>
-        
-        <!-- Tables -->
-        <h2>Recent Trains</h2>
-        <table>
-            <tr>
-                <th>FROM</th>
-                <th>TO</th>
-                <th>TIMMING</th>
-            </tr>
-            <tr>
-                <td>Jaipur</td>
-                <td>Delhi</td>
-                <td>09:45</td>
-            </tr>
-            <tr>
-                <td>Ahemdabad</td>
-                <td>Kurukshetra</td>
-                <td>13:45</td>
-            </tr>
-            <tr>
-                <td>Jaipur</td>
-                <td>Kashmir</td>
-                <td>08:00</td>
-            </tr>
-            <tr>
-                <td>Jodhpur</td>
-                <td>Ajmer</td>
-                <td>02:10</td>
-            </tr>
-        </table>
-
-        <h2>Recent Flight</h2>
-        <table>
-            <tr>
-                <td>FROM</td>
-                <td>TO</td>
-                <td>TIMMING</td>
-            </tr>
-            <tr>
-                <td>Jaipur</td>
-                <td>Delhi</td>
-                <td>21:45</td>
-            </tr>
-            <tr>
-                <td>Bangalore</td>
-                <td>Mumbai</td>
-                <td>01:45</td>
-            </tr>
-            <tr>
-                <td>Jaipur</td>
-                <td>Kashmir</td>
-                <td>01:45</td>
-            </tr>
-            <tr>
-                <td>Jodhpur</td>
-                <td>Chandighar</td>
-                <td>14:10</td>
-            </tr>
-        </table>
-
-        <h2>Recent Buses</h2>
-        <table>
-            <tr>
-                <td>FROM</td>
-                <td>TO</td>
-                <td>TIMMING</td>
-            </tr>
-            <tr>
-                <td>Haridwar</td>
-                <td>Jaipur</td>
-                <td>10:20</td>
-            </tr>
-            <tr>
-                <td>Gurugram</td>
-                <td>Mumbai</td>
-                <td>02:20</td>
-            </tr>
-            <tr>
-                <td>Jaipur</td>
-                <td>Lakshyadeep</td>
-                <td>10:30</td>
-            </tr>
-            <tr>
-                <td>Hisar</td>
-                <td>Chandighar</td>
-                <td>07:50</td>
-            </tr>
-        </table>
-        
-        <!-- Content -->
-        <h3>How to Book Train Ticket Online?</h3>
-        <p>Booking train tickets with us is extremely easy. Follow the below-mentioned steps to make your train booking with us:</p>
-        <p><strong>Step 1:</strong> Visit easemytrip.com and then click on Trains tab.</p>
-        <p><strong>Step 2:</strong> the name of the departure point in 'From' section and destination point in "To" section. Also, select the departure date and then click on Search button.</p>
-        <p><strong>Step 3:</strong> Now, you will see a list of trains according to your search. Choose the train and seat as per your preference. Use filter option to select seat type or category.</p>
-        <p><strong>Step 4:</strong> Click continue button if the departure and destination station are confirmed.</p>
-        <p><strong>Step 5:</strong> Now, you have to mention all the mandatory details related to your booking. Enter the Railways user id, select the boarding point, enter contact details and traveller information (the details are to be mentioned separately for every passenger/child).</p>
-        <p><strong>Step 6:</strong> Once all the details are filled on Review &Travellers page, review all the details to avoid any issue. Check the Price Summary and if you are okay with everything, go ahead with your payment.</p>
-        <p><strong>Step 7:</strong> If you have any coupon code, enter the same in the required field and save your money.</p>
-        <p><strong>Step 8:</strong> Now, make your payment using your preferred option. You can choose from a wide range of options from Debit card, Credit card, UPI, net banking, or wallet money.</p>
-        <p><strong>Step 9:</strong> Once the payment is done, Railways authentication page will open, and you are required to fill in your Railway user ID password after that you will also receive your e-ticket on mobile and email ID.</p>
-        <p>This process for booking train tickets online is simpler with Ease My Trip. It is better to book your travel online rather than standing in queue for long hours. You just need to have Railway user id to book your train tickets with us. In case you don't have Railway user id, you can easily create it online on the official site or by visiting our website.</p>
-        
-        <hr>
-
-        <h3>What are the RAC, GNWL, PQWL, RLWL and TQWL in Railway Reservation?</h3>
-        <p>All of the above except RAC are the types of waiting list available with train booking. WL with a number suggests the waitlisted status of a passenger.</p>
-        <p><strong>RAC :</strong> means Reservation against Cancellation. If you have an RAC ticket, then your travel with a train is guaranteed but you will be given a seat (half of a side lower berth mostly) to sit and travel not an entire berth.</p>
-        <p><strong>GNWL :</strong> General Waiting List waitlisted tickets are issued to the passenger who begins his/her journey from the originating station of a route or stations closer to the originating station.</p>
-        <p><strong>PQWL :</strong> Pooled Quota Waiting List is shared by several small stations of a train route. The quota generally operates from originating station of a train route and only one Pooled Quota is there for entire run. The Pooled Quota is usually selected for the passengers travelling from the originating station to one or few stations short of the terminating station, or from a midway station to theterminating station, or between two stations coming midway of the entire route.</p>
-        <p><strong>RLWL :</strong> Remote Location Waiting List ticket is issued for the stations between the originating and terminating stations. Usually these are important towns or cities of that particular route. These tickets are given a separate priority and their  confirmations will depend on the cancellations of a confirmed ticket. Remote location stations prepare their own chart 2-3 hours prior to the actual departure of train. There are less chances of confirmation for such waitlisted tickets.</p>
-        <p><strong>TQWL :</strong> Tatkal Quota Waiting List was earlier CKWL. It is the waiting list tickets booked under Tatkal Quota. TQWL tickets directly get confirm and don't go through RAC. However, GNWL is given priority over TQWL.</p>
-
-        <hr>
-
-        <h3> When the Chart of a Train is Prepared?</h3>
-        <p>The first chart of a train is typically prepared 4 hours ahead of its departure from originating station or remote location station. Chart of early morning trains is prepared the night before. However, if some seats still remain available, they can be booked by the passengers. So, the final chart is created 30 minutes before departure of train.</p>
-
-        <hr>
-
-        <h3>How can I Cancel Tatkal Tickets?</h3>
-        <p>On cancellation of confirmed Tatkal tickets, no refund is given. On the cancellation of contingent and waitlisted Tatkal tickets, amount will be charged as per the existing rules of Railway. However, you can partially cancel the Tatkal e-tickets.</p>
-
-        <hr>
-
-        <h3>What are the Cancellation Charges for Train Tickets?</h3>
-        <p>To get refunds on cancellation of train tickets, passengers should cancel their tickets before chart preparation. If a confirmed train ticket is cancelled more than 48 hrs prior to the scheduled departure of the train, cancellation charges will be Rs.240/- for AC First Class/Executive Class, Rs.200/- for AC 2 Tier/First Class, Rs. 180 for AC 3 Tier/AC Chair car/ AC 3 Economy, Rs.120/- for Sleeper Class and Rs.60/- for Second Class. These cancellation charges are applicable per ticket per passenger and same will be deducted before processing the refunds. If a confirmed ticket is cancelled between 48 and 12 hours prior to the scheduled departure of the train, cancellation charges will be 25% of the fare (subject to the above mentioned minimum flat rate). Between 12 hours and 4 hours prior to the scheduled departure of the train up to chart preparation (whichever is earlier), 50% of the fare paid subject to the minimum cancellation charges.</p>
-        
-        <!-- Offers -->
-        <div class="w3-container">
-            <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
-                <h2>Get the best offers first!</h2>
-                <p>Join our newsletter.</p>
-                <label>E-Mail</label>
-                <input class="w3-input w3-border" type="text" placeholder="Your Email address">
-                <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
-            </div>
+            <!-- Tabs -->
+             <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+                  <h3>Travel the world with us</h3>
+                  <div class="w3-row-padding" style="margin:0 -16px;">
+                  <div class="w3-half">
+            <label>From</label>
+            <input class="w3-input w3-border" type="text" placeholder="Departing from">
+          </div>
+          <div class="w3-half">
+            <label>To</label>
+            <input class="w3-input w3-border" type="text" placeholder="Arriving at">
+          </div>
         </div>
-
-        <!-- Contact -->
-        <div class="w3-container" style="text-align: left;">
-            <h3>Contact</h3>
-            <p>Let us book your next trip!</p>
-            <i class="fa fa-map-marker" style="width:30px"></i> Jaipur, Rajasthan, India<br>
-            <i class="fa fa-phone" style="width:30px"></i> Phone: +91 09102003<br>
-            <i class="fa fa-envelope" style="width:30px"> </i> Email: Sid@gmail.com<br>
-            <form action="/action_page.php" target="_blank">
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-                <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
-            </form>
+        <p><button class="w3-button w3-dark-grey">Search and find dates</button></p>
+      </div>
+  
+      <div id="Train" class="w3-container w3-white w3-padding-16 myLink">
+        <h3>Find the best Trains</h3>
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half">
+            <label>From</label>
+            <input class="w3-input w3-border" type="text" placeholder="Departing from">
+          </div>
+          <div class="w3-half">
+            <label>To</label>
+            <input class="w3-input w3-border" type="text" placeholder="Arriving at">
+          </div>
         </div>
+        <p><button class="w3-button w3-dark-grey">Search and find dates</button></p>
+      </div>
+  
+      <div id="Bus" class="w3-container w3-white w3-padding-16 myLink">
+        <h3>Best Bus rental in the world!</h3>
+        <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in the world with BusServiceRentalRUs</p>
+        <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
+        <p><button class="w3-button w3-dark-grey">Search Availability</button></p>
+      </div>
+    </div>
+  </header>
 
-        <!-- Footer -->
-        <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
-            <h5>Find us on</h5>
-            <div class="w3-xlarge w3-padding-16">
-                <i class="fa fa-facebook-official w3-hover-opacity"></i>
-                <i class="fa fa-instagram w3-hover-opacity"></i>
-                <i class="fa fa-snapchat w3-hover-opacity"></i>
-                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-                <i class="fa fa-twitter w3-hover-opacity"></i>
-                <i class="fa fa-linkedin w3-hover-opacity"></i>
-            </div>
-            <a class="w3-button w3-round-xxlarge w3-black w3-margin-bottom" href="https://www.google.com" target="_blank">Start now</a>
-        </footer>
+            <h2>RECENT TRAINS</h2>
+            <table>
+                <tr>
+                    <th>FROM</th>
+                    <th>TO</th>
+                    <th>TIMMING</th>
+                </tr>
+                <tr>
+                    <td>Jaipur</td>
+                    <td>Delhi</td>
+                    <td>09:45</td>
+                </tr>
+                <tr>
+                    <td>Ahmedabad</td>
+                    <td>Bihar</td>
+                    <td>13:45</td>
+                </tr>             
+                <tr>
+                    <td>Jaipur</td>
+                    <td>Kashmir</td>
+                    <td>08:00</td>
+                </tr>       
+                <tr>
+                    <td>Jodhpur</td>
+                    <td>Ajmer</td>
+                    <td>02:10</td>
+                </tr>
+            </table>
+                     <h2>RECENT FLIGHTS</h2>
+            <table>
+              <tr>
+                  <th>FROM</th>
+                  <th>TO</th>
+                  <th>TIMMING</th>
+              </tr>
+              <tr>
+                  <td>Jaipur</td>
+                  <td>Delhi</td>
+                  <td>21:45</td>
+              </tr>
+              <tr>
+                  <td>Bangalore</td>
+                  <td>Mumbai</td>
+                  <td>01:45</td>
+              </tr>             
+              <tr>
+                  <td>Jaipur</td>
+                  <td>Kashmir</td>
+                  <td>20:00</td>
+              </tr>       
+              <tr>
+                  <td>Jodhpur</td>
+                  <td>Chandighar</td>
+                  <td>14:10</td>
+              </tr>
+          </table>
 
-        <!-- Script -->
-        <script>
-            function openLink(evt, linkName) {
-                var i, x, tablinks;
-                x = document.getElementsByClassName("mylink");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablink");
-                for (i = 0; i < x.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-                }
-                document.getElementById(linkName).style.display = "block";
-                evt.currentTarget.className += " w3-red";
-            }
-            document.getElementsByClassName("tablink")[0].click();
-        </script>
-    </body>
+          <h2>RECENT BUSES</h2>
+            <table>
+              <tr>
+                  <th>FROM</th>
+                  <th>TO</th>
+                  <th>TIMMING</th>
+              </tr>
+              <tr>
+                  <td>Haridwar</td>
+                  <td>Jaipur</td>
+                  <td>10:20</td>
+              </tr>
+              <tr>
+                  <td>Gurugram</td>
+                  <td>Mumbai</td>
+                  <td>02:20</td>
+              </tr>             
+              <tr>
+                  <td>Jaipur</td>
+                  <td>Lakshyadeep</td>
+                  <td>10:30</td>
+              </tr>       
+              <tr>
+                  <td>Hisar</td>
+                  <td>Chandighar</td>
+                  <td>07:50</td>
+              </tr>
+          </table>
+
+
+
+
+  <h3>How to Book Train Ticket Online?</h3>
+<p>Booking train tickets with us is extremely easy. Follow the below-mentioned steps to make your train booking with us:</p>
+<p><strong>Step 1:</strong> Visit easemytrip.com and then click on Trains tab.</p>
+<p><strong>Step 2:</strong> the name of the departure point in 'From' section and destination point in "To" section. Also, select the departure date and then click on Search button.</p>
+<p><strong>Step 3:</strong> Now, you will see a list of trains according to your search. Choose the train and seat as per your preference. Use filter option to select seat type or category.</p>
+<p><strong>Step 4:</strong> Click continue button if the departure and destination station are confirmed.</p>
+<p><strong>Step 5:</strong> Now, you have to mention all the mandatory details related to your booking. Enter the Railways user id, select the boarding point, enter contact details and 
+        traveller information (the details are to be mentioned separately for every passenger/child).</p>
+<p><strong>Step 6:</strong> Once all the details are filled on Review &Travellers page, review all the details to avoid any issue. Check the Price Summary and if you are okay with everything,
+        go ahead with your payment.</p>
+<p><strong>Step 7:</strong> If you have any coupon code, enter the same in the required field and save your money.</p>
+<p><strong>Step 8:</strong> Now, make your payment using your preferred option. You can choose from a wide range of options from Debit card, Credit card, UPI, net banking, or wallet money.</p>
+<p><strong>Step 9:</strong> Once the payment is done, Railways authentication page will open, and you are required to fill in your Railway user ID password after that you will also receive
+        your e-ticket on mobile and email ID.</p>
+
+<p>This process for booking train tickets online is simpler with Ease My Trip. It is better to book your travel online rather than standing in queue for long hours.
+ You just need to have Railway user id to book your train tickets with us. In case you don't have Railway user id, you can easily create it online on the official site or
+ by visiting our website.</p>
+
+<hr>
+<h3>What are the RAC, GNWL, PQWL, RLWL and TQWL in Railway Reservation?</h3>
+<p>All of the above except RAC are the types of waiting list available with train booking. WL with a number suggests the waitlisted status of a passenger.</p>
+<p><strong>RAC :</strong> means Reservation against Cancellation. If you have an RAC ticket, then your travel with a train is guaranteed but you will 
+      be given a seat (half of a side lower berth mostly) to sit and travel not an entire berth.</p>
+<p><strong>GNWL :</strong> General Waiting List waitlisted tickets are issued to the passenger who begins his/her journey from the originating station of 
+      a route or stations closer to the originating station.</p>
+<p><strong>PQWL :</strong> Pooled Quota Waiting List is shared by several small stations of a train route. The quota generally operates from originating station
+      of a train route and only one Pooled Quota is there for entire run. The Pooled Quota is usually selected for the passengers travelling from the originating station to one
+      or few stations short of the terminating station, or from a midway station to theterminating station, or between two stations coming midway of the entire route.</p>
+<p><strong>RLWL :</strong> Remote Location Waiting List ticket is issued for the stations between the originating and terminating stations.
+     Usually these are important towns or cities of that particular route. These tickets are given a separate priority and their  confirmations will depend on the cancellations 
+     of a confirmed ticket. Remote location stations prepare their own chart 2-3 hours prior to the actual departure of train. 
+     There are less chances of confirmation for such waitlisted tickets.</p>
+<p><strong>TQWL :</strong> Tatkal Quota Waiting List was earlier CKWL. It is the waiting list tickets booked under Tatkal Quota. TQWL tickets directly get 
+      confirm and don't go through RAC. However, GNWL is given priority over TQWL.</p>
+
+<hr>
+
+  <h3> When the Chart of a Train is Prepared?</h3>
+<p>The first chart of a train is typically prepared 4 hours ahead of its departure from originating station or remote location station.
+      Chart of early morning trains is prepared the night before. However, if some seats still remain available, they can be booked by the passengers.
+      So, the final chart is created 30 minutes before departure of train.</p>
+
+<hr>
+
+<h3>How can I Cancel Tatkal Tickets?</h3>
+<p>On cancellation of confirmed Tatkal tickets, no refund is given. On the cancellation of contingent and waitlisted Tatkal tickets,
+      amount will be charged as per the existing rules of Railway. However, you can partially cancel the Tatkal e-tickets.</p>
+<p>What are the Cancellation Charges for Train Tickets?
+      To get refunds on cancellation of train tickets, passengers should cancel their tickets before chart preparation.
+      If a confirmed train ticket is cancelled more than 48 hrs prior to the scheduled departure of the train,
+      cancellation charges will be Rs.240/- for AC First Class/Executive Class, Rs.200/- for AC 2 Tier/First Class, Rs. 180 for AC 3 Tier/AC Chair car/ AC 3 Economy,
+      Rs.120/- for Sleeper Class and Rs.60/- for Second Class. These cancellation charges are applicable per ticket per passenger
+      and same will be deducted before processing the refunds.
+      If a confirmed ticket is cancelled between 48 and 12 hours prior to the scheduled departure of the train,
+      cancellation charges will be 25% of the fare (subject to the above mentioned minimum flat rate).
+      Between 12 hours and 4 hours prior to the scheduled departure of the train up to chart preparation (whichever is earlier),
+      50% of the fare paid subject to the minimum cancellation charges.</p>
+
+      <div class="w3-container">
+        <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
+          <h2>Get the best offers first!</h2>
+          <p>Join our newsletter.</p>
+          <label>E-mail</label>
+          <input class="w3-input w3-border" type="text" placeholder="Your Email address">
+          <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
+        </div>
+      </div>
+
+  <div class="w3-container" style="text-align: left;">
+    <h3>Contact</h3>
+    <p>Let us book your next trip!</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> Jaipur, Rajasthan, India<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +91 09102003<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: Sid@gmail.com<br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+
+  <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+    <h5>Find Us On</h5>
+    <div class="w3-xlarge w3-padding-16">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <a class="w3-button w3-round-xxlarge w3-black w3-margin-bottom" href="https://www.google.com" target="_blank">Start now</a>
+  </footer>
+
+  <script>
+    function openLink(evt, linkName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("myLink");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+      }
+      document.getElementById(linkName).style.display = "block";
+      evt.currentTarget.className += " w3-red";
+    }
+    document.getElementsByClassName("tablink")[0].click();
+  </script>
+        </body>
 </html>
